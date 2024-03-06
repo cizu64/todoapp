@@ -1,7 +1,7 @@
 "use client"
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-export default function SearchTodo()
+export default  function SearchTodo()
 {
     const search = useSearchParams(); //get the search params object
     const pathName = usePathname(); //get the current path for the route

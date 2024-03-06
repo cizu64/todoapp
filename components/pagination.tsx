@@ -3,8 +3,8 @@
 import { usePathname, useRouter } from "next/navigation"
 import { useState } from "react";
 
-export default function Paginate({ totalPages }: { totalPages: any }) {
-
+export default  function Paginate({ totalPages }: { totalPages: any }) {
+    //await new Promise(resolve=>setTimeout(resolve,2000)); //to see suspense in action uncomment and make this component async. Although an error would be thrown
     const pathName = usePathname();
     const { replace } = useRouter();
 
