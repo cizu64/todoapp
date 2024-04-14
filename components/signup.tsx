@@ -1,10 +1,11 @@
 "use client"
 import Link from "next/link";
 import Header from "./header";
-import { SignUp } from "@/app/signup/actions";
-import {SubmitSignupButton} from "@/components/submitSignupButton";
+
 import { useFormState } from 'react-dom'
 import Error from "./errordiv";
+import { SubmitSignupButton } from "./submitSignupButton";
+import { SignUp } from "@/app/signup/action";
 const initialState = {
   detail: '' as string,
   statusCode:null as any
@@ -14,7 +15,7 @@ export default function Signup() {
   return (
     <>
     <Header text="Create an Account"/>
-    <div className="py-8 px-8 max-w-sm max-h-auto my-10 mt-2 mx-auto bg-white rounded-xl shadow-lg space-y-2">
+    <div className="text-black py-8 px-8 max-w-sm max-h-auto my-10 mt-2 mx-auto bg-white rounded-xl shadow-lg space-y-2">
       <form action={formAction}>
         <label className="block">
           <span className="block text-sm font-medium text-slate-700">Email</span>

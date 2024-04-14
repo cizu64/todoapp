@@ -1,10 +1,10 @@
 "use client"
 import Link from "next/link";
 import Header from "./header";
-import {AddTodo} from "@/app/createtodo/actions";
 import { useFormState } from 'react-dom'
 import Error from "./errordiv";
 import { SubmitTodoButton } from "./submitTodoButton";
+import { AddTodo } from "@/app/createtodo/action";
 
 
 const initialState = {
@@ -16,7 +16,7 @@ export default function CreateTodo() {
   return (
     <>
     <Header text="Create Todo"/>
-    <div className="py-8 px-8 max-w-sm max-h-auto my-10 mt-2 mx-auto bg-white rounded-xl shadow-lg space-y-2">
+    <div className="text-black py-8 px-8 max-w-sm max-h-auto my-10 mt-2 mx-auto bg-white rounded-xl shadow-lg space-y-2">
       <form action={formAction}>
   
         <label className="block">
