@@ -3,10 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-<<<<<<< HEAD
 
-=======
->>>>>>> 0003d40 (edit todo)
 export const metadata: Metadata = {
   title: "Todo App",
   description: "Todo App in NextJs and React",

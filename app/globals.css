@@ -10,10 +10,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-<<<<<<< HEAD
-=======
+
     --foreground-rgb: 255, 255, 255;
->>>>>>> 0003d40 (edit todo)
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
