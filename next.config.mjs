@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
-const nextConfig = {};
-=======
 const nextConfig = { 
     images: {
         remotePatterns: [
@@ -14,6 +11,5 @@ const nextConfig = {
         ],
       },
 };
->>>>>>> 0003d40 (edit todo)
 
 export default nextConfig;
