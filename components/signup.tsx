@@ -3,14 +3,14 @@ import Link from "next/link";
 import Header from "./header";
 import { SignUp } from "@/app/signup/actions";
 import {SubmitSignupButton} from "@/components/submitSignupButton";
-import { useFormState } from 'react-dom'
+import { useActionState } from 'react'
 import Error from "./errordiv";
 const initialState = {
   detail: '' as string,
   statusCode:null as any
 }
 export default function Signup() {
-  const [state, formAction] = useFormState(SignUp, initialState)
+  const [state, formAction] = useActionState(SignUp, initialState)
   return (
     <>
     <Header text="Create an Account"/>

@@ -3,14 +3,14 @@ import Link from "next/link";
 import Header from "./header";
 import { Authenticate } from "@/app/login/actions";
 import {SubmitLoginButton} from "@/components/submitLoginButton";
-import { useFormState } from 'react-dom'
+import { useActionState } from 'react'
 import Error from "./errordiv";
 const initialState = {
   detail: '' as string,
   statusCode:null as any
 }
 export default function Login() {
-  const [state, formAction] = useFormState(Authenticate, initialState)
+  const [state, formAction] = useActionState(Authenticate, initialState)
   return (
     <>
     <Header text="Login"/>
