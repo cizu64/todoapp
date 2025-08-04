@@ -12,7 +12,8 @@ import { Suspense } from "react";
 
 //searchParams is a spacial prop that can be use to ssearch querying string in a route
 export default async function Todo({ searchParams }: { searchParams?: { query?: any, pageNum?:number} }) {
-   const todos = await GetTodos(searchParams?.query, searchParams?.pageNum);
+  var sp = await searchParams;
+   const todos = await GetTodos(sp?.query, sp?.pageNum);
    
     return (
       <div className="my-20 max-w-md mx-auto">

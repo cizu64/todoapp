@@ -4,9 +4,10 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function GetTodos(query?: string, pageNum?: number) {
+    var token = (await cookies()).get("token");
     const headers = {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${cookies().get("token")?.value}`
+        "Authorization": `Bearer ${token?.value}`
     }
     let url = "http://localhost:5235/todo/gettodos";
 
@@ -25,9 +26,10 @@ export async function GetTodos(query?: string, pageNum?: number) {
 }
 
 export async function DeleteTodo(id: number) {
+        var token = (await cookies()).get("token");
     const headers = {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${cookies().get("token")?.value}`
+        "Authorization": `Bearer ${token?.value}`
     }
     let url = `http://localhost:5235/todo/deletetodo/${id}`;
     var res = await fetch(url, { method: "DELETE", cache: "no-cache", headers: headers });
@@ -38,9 +40,11 @@ export async function DeleteTodo(id: number) {
 }
 
 export async function UpdateCompleteTodo(id: number, isComplete: boolean) {
+            var token = (await cookies()).get("token");
+
     const headers = {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${cookies().get("token")?.value}`
+        "Authorization": `Bearer ${token?.value}`
     }
     const body =
     {

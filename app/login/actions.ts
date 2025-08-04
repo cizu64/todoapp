@@ -33,6 +33,7 @@ export async function IsAuthenticated(token:string) : Promise<boolean>
         "Content-Type":"application/json"
     }
     var res = await fetch(`http://localhost:5235/User/ValidateToken/${token}`,{method:"GET",cache:"no-cache", headers:headers});
-    var result = res.ok && token!='' && token!=undefined;
+    var isAuth = await res.json();
+    var result = res.ok && token!='' && token!=undefined && isAuth.detail==true;
     return result;
 }
